@@ -1,0 +1,3 @@
+export const WEATHER_DATA_TTL = 60 * 60 * 1000
+export const WEATHER_CHECK_INTERVAL = 10 * 60 * 1000
+export const UPDATE_TIME_INTERVAL = 10000

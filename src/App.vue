@@ -1,11 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import WeatherWidget from '@/components/WeatherWidget.vue'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <WeatherWidget label="Иркутск" :lat="52.287" :lon="104.281" />
 </template>
-
-<style scoped></style>
