@@ -6,7 +6,7 @@ import { useTime } from '@/composables/useTime'
 import { WEATHER_ICONS } from '@/constants/weatherIcons'
 
 const props = defineProps({
-  label: { type: String, default: 'Погода' },
+  label: { type: String, default: 'Weather' },
   lat: { type: Number, default: 0 },
   lon: { type: Number, default: 0 },
   theme: { type: String, default: 'dark' },

@@ -1,48 +1,66 @@
-# WeatherWidget
+# vue-meteo-widget
 
-This template should help get you started developing with Vue 3 in Vite.
+Vue 3 weather widget component using [Open-Meteo API](https://open-meteo.com/).
 
-## Recommended IDE Setup
+## Features
+- Current temperature display.
+- Dynamic icons (day/night).
+- Local time for coordinates.
+- Data caching.
+- TypeScript support.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## Installation
 
 ```sh
-npm install
+npm install vue-meteo-widget
 ```
 
-### Compile and Hot-Reload for Development
+## Usage
 
-```sh
-npm run dev
+### As a plugin (globally)
+
+```ts
+import { createApp } from 'vue'
+import WeatherWidget from 'vue-meteo-widget'
+import 'vue-meteo-widget/style.css'
+
+const app = createApp(App)
+app.use(WeatherWidget)
+app.mount('#app')
 ```
 
-### Type-Check, Compile and Minify for Production
+### As a component (locally)
 
-```sh
-npm run build
+```vue
+<script setup>
+import { WeatherWidget } from 'vue-meteo-widget'
+import 'vue-meteo-widget/style.css'
+</script>
+
+<template>
+  <WeatherWidget 
+    :lat="55.75" 
+    :lon="37.61" 
+    label="Moscow" 
+    theme="dark" 
+  />
+</template>
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Composables
 
-```sh
-npm run lint
+The library also exports logic:
+
+```ts
+import { useWeather, useTime } from 'vue-meteo-widget'
 ```
+
+## Props
+
+- `lat` (Number): Latitude.
+- `lon` (Number): Longitude.
+- `label` (String): Widget title (default: 'Weather').
+- `theme` (String): Theme, 'dark' or 'light' (default: 'dark').
+
+## License
+MIT

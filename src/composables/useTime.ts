@@ -15,13 +15,13 @@ export function useTime(offset: () => number) {
       const utc = now.getTime() + now.getTimezoneOffset() * 60000
       const targetTime = new Date(utc + 3600000 * currentOffset)
 
-      currentLocalTime.value = targetTime.toLocaleTimeString('ru-RU', {
+      currentLocalTime.value = targetTime.toLocaleTimeString('en-GB', {
         hour: '2-digit',
         minute: '2-digit',
       })
       error.value = null
     } catch (err) {
-      error.value = 'Ошибка таймера'
+      error.value = 'Timer error'
     } finally {
       isLoading.value = false
     }

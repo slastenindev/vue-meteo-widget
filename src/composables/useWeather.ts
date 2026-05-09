@@ -33,7 +33,7 @@ export function useWeather(lat: () => number, lon: () => number) {
     try {
       const url = `https://api.open-meteo.com/v1/forecast?latitude=${currentLat}&longitude=${currentLon}&current_weather=true&timezone=auto`
       const res = await fetch(url)
-      if (!res.ok) throw new Error(`Ошибка сети: ${res.status}`)
+      if (!res.ok) throw new Error(`Network error: ${res.status}`)
 
       const data: WeatherApiResponse = await res.json()
 
@@ -51,7 +51,7 @@ export function useWeather(lat: () => number, lon: () => number) {
       error.value = null
     } catch (err) {
       console.error(err)
-      error.value = 'Ошибка загрузки'
+      error.value = 'Failed to load'
     } finally {
       isLoading.value = false
     }
