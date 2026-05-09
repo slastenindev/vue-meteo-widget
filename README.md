@@ -1,4 +1,4 @@
-# vue-meteo-widget
+# @slastenindev/vue-meteo-widget
 
 Vue 3 weather widget component using [Open-Meteo API](https://open-meteo.com/).
 
@@ -12,7 +12,7 @@ Vue 3 weather widget component using [Open-Meteo API](https://open-meteo.com/).
 ## Installation
 
 ```sh
-npm install vue-meteo-widget
+npm install @slastenindev/vue-meteo-widget
 ```
 
 ## Usage
@@ -21,8 +21,8 @@ npm install vue-meteo-widget
 
 ```ts
 import { createApp } from 'vue'
-import WeatherWidget from 'vue-meteo-widget'
-import 'vue-meteo-widget/vue-meteo-widget.css'
+import WeatherWidget from '@slastenindev/vue-meteo-widget'
+import '@slastenindev/vue-meteo-widget/vue-meteo-widget.css'
 
 const app = createApp(App)
 app.use(WeatherWidget)
@@ -33,8 +33,8 @@ app.mount('#app')
 
 ```vue
 <script setup>
-import { WeatherWidget } from 'vue-meteo-widget'
-import 'vue-meteo-widget/vue-meteo-widget.css'
+import { WeatherWidget } from '@slastenindev/vue-meteo-widget'
+import '@slastenindev/vue-meteo-widget/vue-meteo-widget.css'
 </script>
 
 <template>
@@ -52,7 +52,7 @@ import 'vue-meteo-widget/vue-meteo-widget.css'
 The library also exports logic:
 
 ```ts
-import { useWeather, useTime } from 'vue-meteo-widget'
+import { useWeather, useTime } from '@slastenindev/vue-meteo-widget'
 ```
 
 ## Props
