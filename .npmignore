@@ -1,0 +1,18 @@
+# Source files
+src/
+public/
+index.html
+env.d.ts
+tsconfig.*
+vite.config.ts
+eslint.config.ts
+
+# Tooling
+.junie/
+.idea/
+.vscode/
+node_modules/
+*.log
+
+# Build artifacts are included via package.json "files" field, 
+# but we explicitly ignore everything else just in case.

@@ -1,11 +1,12 @@
 import WeatherWidget from './components/WeatherWidget.vue'
 import { useWeather } from './composables/useWeather'
 import { useTime } from './composables/useTime'
+import type { App, Plugin } from 'vue'
 
-export { WeatherWidget, useWeather, useTime }
-
-export default {
-  install: (app: any) => {
+const plugin: Plugin = {
+  install: (app: App) => {
     app.component('WeatherWidget', WeatherWidget)
   },
 }
+
+export { WeatherWidget, useWeather, useTime, plugin as default }

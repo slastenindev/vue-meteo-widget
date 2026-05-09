@@ -2,6 +2,15 @@
   "name": "vue-meteo-widget",
   "version": "1.0.0",
   "description": "Vue 3 weather widget component using Open-Meteo API",
+  "keywords": [
+    "vue",
+    "vue3",
+    "weather",
+    "widget",
+    "meteo",
+    "open-meteo",
+    "typescript"
+  ],
   "author": "Nikolas",
   "license": "MIT",
   "type": "module",

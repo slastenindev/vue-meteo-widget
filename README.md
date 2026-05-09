@@ -22,7 +22,7 @@ npm install vue-meteo-widget
 ```ts
 import { createApp } from 'vue'
 import WeatherWidget from 'vue-meteo-widget'
-import 'vue-meteo-widget/style.css'
+import 'vue-meteo-widget/vue-meteo-widget.css'
 
 const app = createApp(App)
 app.use(WeatherWidget)
@@ -34,7 +34,7 @@ app.mount('#app')
 ```vue
 <script setup>
 import { WeatherWidget } from 'vue-meteo-widget'
-import 'vue-meteo-widget/style.css'
+import 'vue-meteo-widget/vue-meteo-widget.css'
 </script>
 
 <template>

@@ -21,6 +21,7 @@ export default defineConfig({
     rollupOptions: {
       external: ['vue', '@iconify/vue'],
       output: {
+        exports: 'named',
         globals: {
           vue: 'Vue',
           '@iconify/vue': 'Iconify',
