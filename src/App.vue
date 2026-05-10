@@ -3,5 +3,5 @@ import WeatherWidget from '@/components/WeatherWidget.vue'
 </script>
 
 <template>
-  <WeatherWidget label="Иркутск" :lat="52.287" :lon="104.281" />
+  <WeatherWidget label="Южно-Сахалинск" :lat="46.957771" :lon="142.729587" />
 </template>

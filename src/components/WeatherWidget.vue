@@ -53,14 +53,14 @@ watch(
       <span class="weather-widget__temp">
         {{ Math.round(weatherData.current_weather.temperature) }}°C
       </span>
-      <Icon class="weather-widget__icon" :icon="weatherIcon" width="48" height="48" />
+      <Icon class="weather-widget__icon" :icon="weatherIcon" />
     </div>
   </div>
 </template>
 
 <style scoped>
 .weather-widget {
-  --weather-widget__size: 1.4rem;
+  --weather-widget__size: 1em;
   --dark: #333;
   --white: #fff;
 
@@ -76,17 +76,18 @@ watch(
 }
 
 .weather-widget__container {
-  font-family: sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  font-family: inherit;
   font-size: var(--weather-widget__size);
   font-weight: normal;
+  white-space: nowrap;
 }
-.weather-widget__container span {
-  margin-right: 0.3em;
-}
+
 .weather-widget__icon {
-  width: 1.8em;
-  height: 1.8em;
-  vertical-align: middle;
+  width: 1.5em;
+  height: 1.5em;
   color: currentColor;
 }
 </style>
