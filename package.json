@@ -1,6 +1,6 @@
 {
   "name": "@slastenindev/vue-meteo-widget",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vue 3 weather widget component using Open-Meteo API",
   "keywords": [
     "vue",
