@@ -26,7 +26,7 @@
       "import": "./dist/vue-meteo-widget.es.js",
       "require": "./dist/vue-meteo-widget.umd.js"
     },
-    "./style.css": "./dist/vue-meteo-widget.css"
+    "./vue-meteo-widget.css": "./dist/vue-meteo-widget.css"
   },
   "scripts": {
     "dev": "vite",
